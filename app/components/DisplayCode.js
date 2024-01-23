@@ -1,9 +1,9 @@
 export default function DisplayCode({ items }) {
-  console.log(items);
   return (
     <div>
       {items && items.length > 0 && (
         <div className="grid grid-cols-2 gap-4 w-[800px] border-2 border-gray-600 p-4 shadow-2xl rounded-2xl">
+          <h1 className="font-extrabold mt-2">{items[0].ItemName}</h1>
           {Object.entries(items[0])
             .filter(
               ([key]) =>

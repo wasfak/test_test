@@ -14,8 +14,9 @@ export default function Home() {
   const handleClick = async () => {
     // Call the getCode function with the current input value
     const searched = await getCode(code);
-    console.log(searched);
+
     setData(searched);
+    setCode("");
   };
 
   return (
