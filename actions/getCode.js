@@ -7,6 +7,7 @@ export const getCode = async (code) => {
   const search = Number(code);
   await db.connectDb();
   const searchedCode = await CodeModel.find({ Code: search });
+  await db.disconnectDb();
 
   return searchedCode;
 };
